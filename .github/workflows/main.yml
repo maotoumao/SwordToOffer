@@ -12,7 +12,6 @@ jobs:
                 server_port: 587
                 username: ${{ secrets.MAILUSERNAME }}
                 password: ${{ secrets.MAILPASSWORD }}
-                subject: Shanghai Weather Report
-                body: wowwow
+                subject: "wow 邮件主题" 
                 to: lhx_xjtu@163.com
-                from: GitHub Actions
+                from: 猫头猫机器人
