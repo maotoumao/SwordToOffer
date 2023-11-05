@@ -1,0 +1,18 @@
+name: 打包
+on: 
+    workflow_dispatch:
+jobs:
+    build-windows: 
+        runs-on: windows-latest
+        steps:
+            - name: 'Send mail'
+              uses: dawidd6/action-send-mail@master
+              with:
+                serveraddress: smtp.qq.com
+                serverport: 587
+                username: ${{ secrets.MAILUSERNAME }}
+                password: ${{ secrets.MAILPASSWORD }}
+                subject: Shanghai Weather Report
+                body: wowwow
+                to: lhx_xjtu@163.com
+                from: GitHub Actions
